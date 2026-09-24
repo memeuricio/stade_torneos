@@ -648,16 +648,25 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
 .descuentos__table tbody tr:hover { background: rgba(126, 194, 66, 0.12); }
 .descuentos__price { font-weight: 700; color: var(--navy); }
 
-.descuentos-detalle { margin-bottom: 34px; overflow-x: auto; border-radius: var(--radius-sm); box-shadow: var(--shadow); }
+.descuentos-detalle { margin-bottom: 34px; border-radius: var(--radius-sm); box-shadow: var(--shadow); background: var(--navy); overflow: hidden; }
+.descuentos-detalle__summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 18px 22px; cursor: pointer; list-style: none;
+  font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.03em;
+  text-transform: uppercase; color: var(--white); user-select: none;
+}
+.descuentos-detalle__summary::-webkit-details-marker { display: none; }
+.descuentos-detalle__summary:hover { background: rgba(255, 255, 255, 0.06); }
+.descuentos-detalle__chevron {
+  flex-shrink: 0; font-size: 1.2rem; line-height: 1;
+  transition: transform 0.3s ease;
+}
+.descuentos-detalle[open] .descuentos-detalle__chevron { transform: rotate(180deg); }
+.descuentos-detalle__scroll { overflow-x: auto; padding: 0 22px 22px; }
 .descuentos-detalle__table {
   width: 100%; border-collapse: separate; border-spacing: 0; min-width: 760px;
   background: var(--white); border-radius: var(--radius-sm); overflow: hidden;
   font-size: 0.85rem;
-}
-.descuentos-detalle__table caption {
-  background: var(--navy); color: var(--white);
-  font-family: var(--font-display); font-size: 1.15rem; letter-spacing: 0.02em;
-  text-transform: uppercase; text-align: center; padding: 14px 16px;
 }
 .descuentos-detalle__table th {
   background: var(--navy-mid); color: var(--white);
@@ -678,9 +687,19 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
   text-transform: uppercase; text-align: left; padding: 10px 16px;
 }
 .descuentos-detalle__legend {
-  margin-top: 14px; font-size: 0.82rem; color: rgba(255, 255, 255, 0.65);
+  margin: 0; padding: 0 22px 20px; font-size: 0.82rem; color: rgba(255, 255, 255, 0.65);
 }
 .descuentos-detalle__legend strong { color: var(--white); }
+
+@media (max-width: 640px) {
+  .descuentos__table { font-size: 0.82rem; }
+  .descuentos__table th, .descuentos__table td { padding: 10px 12px; }
+  .descuentos-detalle__summary { padding: 14px 16px; font-size: 0.92rem; }
+  .descuentos-detalle__scroll { padding: 0 16px 16px; }
+  .descuentos-detalle__legend { padding: 0 16px 16px; font-size: 0.75rem; }
+  .descuentos-detalle__table { font-size: 0.78rem; min-width: 680px; }
+  .descuentos-detalle__table th, .descuentos-detalle__table td { padding: 7px 8px; }
+}
 
 .inscripcion__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 54px; align-items: center; }
 .pasos__title {

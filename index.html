@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=14">
+  <link rel="stylesheet" href="css/styles.css?v=15">
 </head>
 <body>
   <div class="preloader" id="preloader">
@@ -411,9 +411,13 @@
           </table>
         </div>
 
-        <div class="descuentos-detalle reveal">
+        <details class="descuentos-detalle reveal">
+          <summary class="descuentos-detalle__summary">
+            <span>Tabla de valores según oportunidad de pago y tipo de inscripción</span>
+            <span class="descuentos-detalle__chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="descuentos-detalle__scroll">
           <table class="descuentos-detalle__table">
-            <caption>Tabla de valores según oportunidad de pago y tipo de inscripción</caption>
             <thead>
               <tr>
                 <th>Precios MT1000 2026</th>
@@ -648,8 +652,9 @@
               </tr>
             </tbody>
           </table>
+          </div>
           <p class="descuentos-detalle__legend"><strong>A</strong> = con descuento por pronto pago (10%) · <strong>B</strong> = tarifa normal · <strong>—</strong> = descuento no aplica a esa categoría</p>
-        </div>
+        </details>
 
         <div class="inscripcion__grid">
           <div class="pasos">

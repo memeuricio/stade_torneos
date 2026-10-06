@@ -664,7 +664,7 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
 .descuentos-detalle[open] .descuentos-detalle__chevron { transform: rotate(180deg); }
 .descuentos-detalle__scroll { overflow-x: auto; padding: 0 22px 22px; }
 .descuentos-detalle__table {
-  width: 100%; border-collapse: separate; border-spacing: 0; min-width: 760px;
+  width: 100%; border-collapse: separate; border-spacing: 0; min-width: 860px;
   background: var(--white); border-radius: var(--radius-sm); overflow: hidden;
   font-size: 0.85rem;
 }
@@ -681,6 +681,8 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
 .descuentos-detalle__table td:first-child { text-align: left; font-weight: 600; }
 .descuentos-detalle__table tbody tr:not(.descuentos-detalle__group):hover { background: rgba(126, 194, 66, 0.1); }
 .descuentos-detalle__table td.na { color: var(--text-gray); font-weight: 400; background: var(--off-white); }
+.descuentos-detalle__table td.total { font-weight: 700; text-align: right; }
+.descuentos-detalle__table th:last-child { text-align: right; }
 .descuentos-detalle__table tr.descuentos-detalle__group td {
   background: var(--teal-mid); color: var(--white);
   font-family: var(--font-display); font-size: 0.95rem; letter-spacing: 0.04em;
@@ -697,7 +699,7 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
   .descuentos-detalle__summary { padding: 14px 16px; font-size: 0.92rem; }
   .descuentos-detalle__scroll { padding: 0 16px 16px; }
   .descuentos-detalle__legend { padding: 0 16px 16px; font-size: 0.75rem; }
-  .descuentos-detalle__table { font-size: 0.78rem; min-width: 680px; }
+  .descuentos-detalle__table { font-size: 0.78rem; min-width: 760px; }
   .descuentos-detalle__table th, .descuentos-detalle__table td { padding: 7px 8px; }
 }
 

@@ -886,7 +886,7 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
 .sponsor:hover { color: var(--navy); transform: scale(1.05); }
 .sponsor--main { color: var(--navy); }
 .sponsor--logo {
-  box-sizing: content-box; height: clamp(40px, 5vw, 64px); width: auto; max-width: 210px;
+  box-sizing: content-box; height: clamp(28px, 3.2vw, 44px); width: auto; max-width: 150px;
   object-fit: contain; opacity: 0.75;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }

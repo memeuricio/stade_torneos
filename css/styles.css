@@ -1200,3 +1200,13 @@ body.is-scrolled .topbar { margin-top: calc(var(--topbar-h) * -1); }
   .hero__court .court-lines > * { stroke-dashoffset: 0; }
   .hero__court .court-net { opacity: 1; animation: none; }
 }
+
+/* Tablas de valores hombres / mujeres */
+.tarifas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; margin-bottom: 40px; }
+.tarifas .descuentos { margin-bottom: 0; }
+.tarifas .descuentos__table { min-width: 0; }
+.tarifas .descuentos__table td:not(:first-child) { text-align: center; }
+.tarifas__nota { grid-column: 1 / -1; margin: -12px 0 0; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
+@media (max-width: 820px) {
+  .tarifas { grid-template-columns: 1fr; gap: 24px; }
+}
